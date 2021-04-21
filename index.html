@@ -9,9 +9,13 @@
 </head>
 <body>
   <header class="header">
-
+    <picture class="course__preview">
+      <source srcset="images/banner-bg.jpg" media="(min-width: 1200px)">
+      <source srcset="images/banner-bg-tablet.jpg" media="(min-width: 768px) and (max-width: 1199px)">
+      <source srcset="images/banner-mobile.jpg" media="(min-width: 360px) and (max-width: 767px)">
+    </picture>
     <div class="container">
-      <a href="/"><img src="https://netology-code.github.io/html-2-diploma/sources/images/noemi-logo.svg" class="header-logo" width="180px" alt="Девушка медитирует над обрывом"></a>
+      <a href="/"><img src="svg/noemi-logo.svg" class="header-logo" width="180px" alt="Логотип Noemi"></a>
       <nav class="menu">
         <ul class="menu-list">
           <li class="menu-list-item">
@@ -45,7 +49,7 @@
       <div class="travel-articles">
         <article class="travel">
           <div class="travel-preview">
-            <img class="travel-img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post1.jpg" alt="Идущий по линии прибоя силуэт">
+            <img class="travel-img" src="images/last-post1.jpg" alt="Идущий по линии прибоя силуэт">
           </div>
           <div class="travel-info">
             <ul class="tags-list">
@@ -68,7 +72,7 @@
         </article>
         <article class="travel">
           <div class="travel-preview">
-            <img class="travel-img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post2.jpg" alt="Йога на пляже">
+            <img class="travel-img" src="images/last-post2.jpg" alt="Йога на пляже">
           </div>
           <div class="travel-info">
             <ul class="tags-list">
@@ -89,7 +93,7 @@
         </article>
         <article class="travel">
           <div class="travel-preview">
-            <img class="travel-img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post3.jpg" alt="Девушка на летнем концерте">
+            <img class="travel-img" src="images/last-post3.jpg" alt="Девушка на летнем концерте">
           </div>
           <div class="travel-info">
             <ul class="tags-list">
@@ -112,7 +116,7 @@
         </article>
         <article class="travel">
           <div class="travel-preview">
-            <img class="travel-img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" alt="Красивый обед на деревянном столе">
+            <img class="travel-img" src="images/last-post4.jpg" alt="Красивый обед на деревянном столе">
           </div>
           <div class="travel-info">
             <ul class="tags-list">
@@ -133,9 +137,34 @@
             </div>
           </div>
         </article>
+             
         <article class="travel">
           <div class="travel-preview">
-            <img class="travel-img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post5.jpg" alt="Модная подушка">
+            <img class="travel-img" src="last-post4.jpg" alt="Красивый обед на деревянном столе">
+          </div>
+          <div class="travel-info">
+            <ul class="tags-list">
+              <li><a class="tag-list" href="#0">Lifestyle</a></li>
+              <li><a class="tag-list" href="#0">Food</a></li>
+            </ul>
+            <h3 class="travel-name"><a class="page-link" href="#0">Наукоёмкий подход к кулинарии</a></h3>
+            <ul class="date-autor-list">
+              <li class="date-autor-list"><time class="card-date" datetime="2019-06-10">10 июня 2019</time></li>
+              <li class="date-autor-list">
+                <p class="author">Неизвестный автор</p>
+              </li>
+            </ul>
+            <div class="travel-description">
+              <p>
+                Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="travel">
+          <div class="travel-preview">
+            <img class="travel-img" src="images/last-post5.jpg" alt="Модная подушка">
           </div>
           <div class="travel-info">
             <ul class="tags-list">
@@ -157,54 +186,6 @@
             </div>
           </div>
         </article>
-        <article class="travel">
-          <div class="travel-preview">
-            <img class="travel-img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post6.jpg" alt="Два человека в горах">
-          </div>
-          <div class="travel-info">
-            <ul class="tags-list">
-              <li><a class="tag-list" href="#0">TRAVEL</a></li>
-              <li><a class="tag-list" href="#0">Lifestyle</a></li>
-            </ul>
-            <h3 class="travel-name"><a class="page-link" href="#0">Как первый раз отправиться в горы?</a></h3>
-            <ul class="date-autor-list">
-              <li class="date-autor-list"><time class="card-date" datetime="2019-06-10">10 июня 2019</time></li>
-              <li class="date-autor-list">
-                <p class="author">Неизвестный автор</p>
-              </li>
-            </ul>
-            <div class="travel-description">
-              <p>
-                Освойте одну из самых востребованных профессий на сегодняшний день. Добавьте в свой арсенал три самые
-                популярные технологии: HTML, CSS и JavaScript и создавайте сайты и интерактивные веб-приложения, доступные на
-                большинстве платформ.
-              </p>
-            </div>
-          </div>
-        </article>
-        <article class="travel">
-          <div class="travel-preview">
-            <img class="travel-img" src="https://netology-code.github.io/html-2-diploma/sources/images/last-post4.jpg" alt="Красивый обед на деревянном столе">
-          </div>
-          <div class="travel-info">
-            <ul class="tags-list">
-              <li><a class="tag-list" href="#0">Lifestyle</a></li>
-              <li><a class="tag-list" href="#0">Food</a></li>
-            </ul>
-            <h3 class="travel-name"><a class="page-link" href="#0">Наукоёмкий подход к кулинарии</a></h3>
-            <ul class="date-autor-list">
-              <li class="date-autor-list"><time class="card-date" datetime="2019-06-10">10 июня 2019</time></li>
-              <li class="date-autor-list">
-                <p class="author">Неизвестный автор</p>
-              </li>
-            </ul>
-            <div class="travel-description">
-              <p>
-                Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.
-              </p>
-            </div>
-          </div>
-        </article>
       </div>
     </main>
 
@@ -216,7 +197,7 @@
 
         <section class="post-list">
           <div class="preview-picture">
-            <img class="aside-image" src="https://netology-code.github.io/html-2-diploma/sources/images/2.jpg" alt="Идущий по линии прибоя силуэт">
+            <img class="aside-image" src="images/2.jpg" alt="Идущий по линии прибоя силуэт">
           </div>
           <article class="last-post-header">
             <time class="last-post-date" datetime="2019-06-14">14 июня 2019 </time>
@@ -228,7 +209,7 @@
 
         <section class="post-list">
           <div class="preview-picture">
-            <img class="aside-image" src="https://netology-code.github.io/html-2-diploma/sources/images/151.jpg" alt="Йога дома">
+            <img class="aside-image" src="images/151.jpg" alt="Йога дома">
           </div>
           <article class="last-post-header">
             <time class="last-post-date" datetime="2019-06-14">14 июня 2019 </time>
@@ -240,7 +221,7 @@
 
         <section class="post-list">
           <div class="preview-picture">
-            <img class="aside-image" src="https://netology-code.github.io/html-2-diploma/sources/images/45.jpg" alt="Кресло">
+            <img class="aside-image" src="images/45.jpg" alt="Кресло">
           </div>
           <article class="last-post-header">
             <time class="last-post-date" datetime="2019-06-14">14 июня 2019 </time>
@@ -252,7 +233,7 @@
 
         <section class="post-list">
           <div class="preview-picture">
-            <img class="aside-image" src="https://netology-code.github.io/html-2-diploma/sources/images/501.jpg" alt="Красивый обед на деревянном столе">
+            <img class="aside-image" src="images/501.jpg" alt="Красивый обед на деревянном столе">
           </div>
           <article class="last-post-header">
             <time class="last-post-date" datetime="2019-06-14">14 июня 2019 </time>
@@ -264,7 +245,7 @@
 
         <section class="post-list">
           <div class="preview-picture">
-            <img class="aside-image" src="https://netology-code.github.io/html-2-diploma/sources/images/7.jpg" alt="Длинные волосы трех девушек">
+            <img class="aside-image" src="images/7.jpg" alt="Длинные волосы трех девушек">
           </div>
           <article class="last-post-header">
             <time class="last-post-date" datetime="2019-06-14">14 июня 2019 </time>
