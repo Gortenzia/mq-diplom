@@ -24,7 +24,7 @@
  }
 }
 
-@media (min-height: 641px) and (max-height: 1200px) and (orientation: landscape) {
+@media (min-height: 641px) and (max-height: 1199px) and (orientation: landscape) {
 .header {
    background-image: url(../images/banner-bg-tablet.jpg);
  }
@@ -37,7 +37,7 @@
   }
 }
 
-@media (min-height: 641px) and (max-height: 1200px) and (orientation: portrait) {
+@media (min-height: 641px) and (max-height: 1199px) and (orientation: portrait) {
 .header {
    background-image: url(../images/banner-bg-tablet.jpg);
  }
@@ -51,15 +51,13 @@
 }
 
 @media (min-height: 1200px) {
-  .header {
-   background-image: url(../images/banner-bg.jpg);
-  }
-  .card {
+    .card {
     width: 25%;
   }
 }
 
 .header {
+  background-image: url(../images/banner-bg.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -152,10 +150,15 @@
 }
 
 
-.trend-continer {
- background-color: 
+.trend-container {
+  width: 100%;
+  display: flex;
 }
 
+. trend-section {
+  width: 100%;
+  display: flex;
+}
 
 .trend-header {
   font-size: 20px;
@@ -164,35 +167,56 @@
   font-weight: 700;
   font-family: Open Sans;
   text-transform: uppercase;
-}
-
-.trend-header::after {
-  content: " ";
-  border-bottom: 3px solid #b59f5b;
-  border-bottom-height: 67px;
-  padding-bottom: 10px;
-  color: #0f0d0e;
-  width: 60%;
   align-items: center;
+  justify-contant: center;
+  display: flex;
+  margin-left: 44%;
 }
 
-.card__body {
-  position: relative;
-  z-index: 2;
-  margin-left: auto;
-  margin-right: auto;	
+.section__header:after {
+  content: " ";
+  width: 150px;
+  height: 3px;
+  display: flex;
+  background-color: #b59f5b;
+  align-item: center;
+  justify-contant: center;
+  margin-bottom: 30px;
+  margin-left: 45%;
 }
 
-.card__img {
+.card-container {
+   display: flex;
+  
+}
+
+.card1, .card2, .card3, .card4 {
+  background-image: url(https://gortenzia.github.io/mq-diplom/images/trend1.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  background-color: #000000;
+  background-color: #eff6f1;
+  width: 25%;
+  height: 319px;
+  margin: 2px;
   position: relative;
-  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+ }
+
+.card2 {
+  background-image: url(https://gortenzia.github.io/mq-diplom/images/trend2.jpg);
 }
 
-.card__img:after {
+.card3 {
+  background-image: url(https://gortenzia.github.io/mq-diplom/images/trend3.jpg);
+}
+
+.card4 {
+  background-image: url(https://gortenzia.github.io/mq-diplom/images/trend4.jpg);
+}
+
+.card1::after, .card2::after, .card3::after, .card4::after{
   content: " ";
   position: absolute;
   top: 0;
@@ -202,6 +226,69 @@
   background-color: #000000;
   opacity: 0.6;
   z-index: 0;
+ }
+
+
+.card__body {
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  padding: 0px 15px 15px 25px;
+  margin: 5%;
+  position: relative;
+  text-align: stretch;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 1;
+ }
+
+.card__body:before {
+  content: "";
+  width: 370px;
+  height: 146px;
+  border: 3px solid #b59f5b;
+  background-color: rgba(0,0,0,0);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 95%;
+  height: 95%;
+ }
+
+.card__name {
+width: 90%;
+height: 70%;
+font-size: 20px;
+line-height: 24px;
+color: #ffffff;
+font-weight: 700;
+font-family: Open Sans;
+padding-bottom: 20px;
+padding-right: 20px;
+margin-top: -20px;
+vertical-align: center;
+}
+
+.card__name:hover {
+font-size: 20px;
+line-height: 24px;
+color: #b59f5b;
+font-weight: 700;
+font-family: Open Sans;
+}
+
+.trend-tags-list {
+  display: flex;
+  flex-direction: row;
+  vertical-align: top;
+  list-style-type: none;
+  margin-left: -40px;
 }
 
 .page {
@@ -213,7 +300,7 @@
 }
 
 .travel-articles {
-  width: 860px;
+  max-width: 860px;
   margin-right: auto;
   margin-left: auto;
   display: flex;
