@@ -153,15 +153,10 @@
 }
 
 
-.trend-container {
+.trend-section {
   width: 100%;
-  display: flex;
+  display: flex; 
   flex-direction: column;
-}
-
-. trend-section {
-  width: 100%;
-  display: flex;
 }
 
 .trend-header {
@@ -173,20 +168,20 @@
   text-transform: uppercase;
   align-items: center;
   display: flex;
-  margin-left: 44%;
-  margin-top: 50px;
+  margin-top: 20px;
+  
 }
 
 .section__header:after {
   content: " ";
-  width: 150px;
+  width: 66px;
   height: 3px;
   display: flex;
   background-color: #b59f5b;
-  margin-bottom: 30px;
-  margin-left: 45%;
-  margin-bottom: 40px;
-}
+  margin-bottom: 35px;
+  margin-left: 62%;
+ }
+
 
 
 .card-container {
@@ -208,19 +203,19 @@
  }
 
 .card1 {
-  background-image: url(https://gortenzia.github.io/mq-diplom/images/trend1.jpg);
+  background-image: url(../images/trend1.jpg);
 }
 
 .card2 {
-  background-image: url(https://gortenzia.github.io/mq-diplom/images/trend2.jpg);
+  background-image: url(../images/trend2.jpg);
 }
 
 .card3 {
-  background-image: url(https://gortenzia.github.io/mq-diplom/images/trend3.jpg);
+  background-image: url(../images/trend3.jpg);
 }
 
 .card4 {
-  background-image: url(https://gortenzia.github.io/mq-diplom/images/trend4.jpg);
+  background-image: url(../images/trend4.jpg);
 }
 
 .card1::after, .card2::after, .card3::after, .card4::after{
@@ -778,6 +773,7 @@ h3 {
   display: flex;
   flex-direction: column;
   max-width: 1200px;
+  margin: 70px auto;
 }
 
 .section__header {
@@ -792,7 +788,7 @@ h3 {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
 }
 
 .section__header::after {
@@ -800,9 +796,8 @@ h3 {
   width: 66px;
   height: 3px;
   background-color: #b59f5b;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-right: 62%;
 }
 
 .products {
@@ -819,6 +814,8 @@ h3 {
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
 }
 
 .product {
@@ -833,7 +830,7 @@ h3 {
   content: " ";
   top: 0;
   bottom: 0;
-  left: -25px;
+  left: -20px;
   right: -15px;
   position: absolute;
   width: 347px;
@@ -859,15 +856,15 @@ h3 {
 }
 
 .product__imgbox1 {
-  background-image: url(https://gortenzia.github.io/mq-diplom/images/shop-item-desk1.jpg);
+  background-image: url(../images/shop-item-desk1.jpg);
 }
 
 .product__imgbox2 {
-  background-image: url(https://gortenzia.github.io/mq-diplom/images/shop-item-desk2.jpg);
+  background-image: url(../images/shop-item-desk2.jpg);
 }
 
 .product__imgbox3 {
-  background-image: url(https://gortenzia.github.io/mq-diplom/images/shop-item-desk3.jpg);
+  background-image: url(../images/shop-item-desk3.jpg);
 }
 
  .product-description {
@@ -900,6 +897,7 @@ h3 {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .product__prices {
