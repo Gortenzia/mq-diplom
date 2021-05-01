@@ -156,9 +156,10 @@
 .trend-container {
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
 
-.trend-section {
+. trend-section {
   width: 100%;
   display: flex;
 }
@@ -171,10 +172,9 @@
   font-family: Open Sans;
   text-transform: uppercase;
   align-items: center;
-  justify-content: center;
   display: flex;
   margin-left: 44%;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .section__header:after {
@@ -183,11 +183,11 @@
   height: 3px;
   display: flex;
   background-color: #b59f5b;
-  align-items: center;
-  justify-content: : center;
   margin-bottom: 30px;
   margin-left: 45%;
+  margin-bottom: 40px;
 }
+
 
 .card-container {
    display: flex;
@@ -280,7 +280,7 @@ font-weight: 700;
 font-family: Open Sans;
 padding-bottom: 20px;
 padding-right: 20px;
-
+z-index: 1;
 vertical-align: center;
 }
 
@@ -297,7 +297,7 @@ font-family: Open Sans;
   flex-direction: row;
   vertical-align: top;
   list-style-type: none;
- 
+  z-index: 1;
 }
 
 .page {
@@ -773,16 +773,12 @@ h3 {
   vertical-align: top;
 }
 
+
 .product-container {
   display: flex;
   flex-direction: column;
-  
+  max-width: 1200px;
 }
-
-.products {
-    display: flex;
-    align-items: flex-start;
- }
 
 .section__header {
   font-size: 20px;
@@ -803,45 +799,63 @@ h3 {
   content: " ";
   width: 66px;
   height: 3px;
- 
   background-color: #b59f5b;
-  align-item: center;
+  align-items: center;
   justify-content: center;
   margin-bottom: 30px;
- 
 }
 
-.product-title {
+.products {
+  display: flex;
+  align-items: flex-start;
+}
+
+.product__title {
   font-size: 20px;
-  line-height: 29px;
+  line-height: 24px;
   color: #0f0d0e;
   font-weight: 700;
   font-family: Open Sans;
   text-transform: uppercase;
-}
- 
-.product-title: after {
-  content: " ";
-  border-bottom: 3px solid #b59f5b;
-  border-bottom-height: 67px;
-  padding-bottom: 10px;
-  color: #0f0d0e;
-  width: 60%;
   align-items: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
- }  
-
+  justify-content: center;
+}
 
 .product {
   width: 32%;
-  margin: 1%;
+  margin: 50px;
+  flex-grow: 1;
+  position: relative;
+  
+ }
+
+.product::after {
+  content: " ";
+  top: 0;
+  bottom: 0;
+  left: -25px;
+  right: -15px;
+  position: absolute;
+  width: 347px;
+  height: 267px;
+  background-color: rgba(0, 0, 0, 0);
+  outline: 3px solid #b59f5b;
+  margin-top: 150px;
+  margin-right: 0px;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
 }
 
-.product__imgbox1, .product__imgbox2, .product__imgbox3 {
-  
+.product__imgbox1,
+.product__imgbox2,
+.product__imgbox3 {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 300px;
+  height: 204px;
+  background-color: #eff6f1;
 }
 
 .product__imgbox1 {
@@ -853,31 +867,33 @@ h3 {
 }
 
 .product__imgbox3 {
-  background-image: url(../images/shop-item-desk3.jpg);
+  background-image: url(https://gortenzia.github.io/mq-diplom/images/shop-item-desk3.jpg);
 }
 
-.product-description {
-width: 301px;
-height: 63px;
-font-size: 15px;
-line-height: 22px;
-color: #0f0d0e;
-font-weight: 400;
-font-family: Open Sans;
-}
-
-.product-link a{
-  text-decoration: none;
+ .product-description {
+  width: 301px;
+  height: 63px;
+  font-size: 15px;
+  line-height: 22px;
   color: #0f0d0e;
+  font-weight: 400;
+  font-family: Open Sans;
+  
+ }
+
+
+.product-link {
+  text-decoration: none;
+  color: #b59f5b;
   font-size: 14px;
   line-height: 47px;
-  border-bottom: 1px solid #eeeeee;
-  padding-bottom: 2px;
-  min-width: 271px;
+  line-height: 22px;
+  z-index: 1;
 }
 
-.product-link a:hover {
-  color: #b59f5b;
+.product-link:hover {
+  color: #323232;
+  
 }
 
 .product__footer {
@@ -887,31 +903,27 @@ font-family: Open Sans;
 }
 
 .product__prices {
-  display: flex;
-  flex-direction: column;
+  max-width: 80px;
 }
 
 .product__price {
-  display: flex;
+  font-size: 20px;
+  line-height: 24px;
+  color: #0f0d0e;
+  font-weight: 700;
+  font-family: Open Sans;
   flex-direction: column;
   margin-right: 10px;
-  }
-
-.product__price_old {
-font-size: 14px;
-line-height: 24px;
-text-decoration: line-through;
-color: #0f0d0e;
-font-weight: 700;
-font-family: Open Sans;
+  width: 50%;
 }
 
-.product__price {
-font-size: 20px;
-line-height: 24px;
-color: #0f0d0e;
-font-weight: 700;
-font-family: Open Sans;
+.product__price_old {
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: line-through;
+  color: #0f0d0e;
+  font-weight: 700;
+  font-family: Open Sans;
 }
 
 .product__button {
@@ -926,14 +938,12 @@ font-family: Open Sans;
   color: #ffffff;
   font-weight: 700;
   font-family: Open Sans;
-  
+  z-index: 1;
 }
 
 .product__button:hover {
   background-color: #313131;
 }
-
-
 
 
 .footer {
