@@ -8,6 +8,54 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+	<div class="popup" style="display-none">
+  <div class="popup__container">
+    <div class="sign-up">
+      <header class="sign-up__header">
+        <h3 class="sign-up__title">Ваш фидбек</h3>
+      </header>
+
+      <div class="sign-up__content">
+
+        <form class="form">
+          <div class="form-group">
+            <label class="select-group">
+              <span class="select-label">Как часто вы заходите на сайт?</span>
+              <select class="select">
+                <option value="every-day" selected>Почти каждый день</option>
+                <option value="once-in-some-days">Раз в несколько дней</option>
+                <option value="once-in-weeks">Раз в несколько недель</option>
+                <option value="several-in-year">Несколько раз в год</option>
+              </select>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="form-radio">
+        <span class="form-radio-text">Вы подписаны на e-mail рассылку?</span>
+        <label class="radio-group">
+          <input name="select" type="radio" class="radio">
+          <span class="radio-text" value="1">Да</span> 
+          </label>
+         <label class="radio-group">
+          <input name="select" type="radio" class="radio">
+          <span class="radio-text" value="0">Нет</span>
+         </label>
+      </div>
+      <div class="text-form-group">
+        <label class="field-group">
+          <span class="field-label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+          <textarea class="field-textarea" placeholder="Может, больше рецептов?" rows="10" cols="45" name="text"></textarea>
+        </label>
+      </div>
+      <div class="form-group form-actions">
+        <button class="pop-button-submit" type="button"><span class="pop-button-submit-text">Отправить</span></button>
+      </div>
+      </form>
+    </div>
+    <button class="popup__close" type="button"><span class="popup__close-text">Закрыть окно</span></button>
+  </div>
+</div>
   <header class="header">
     <div class="container">
       <a href="/"><img src="svg/noemi-logo.svg" class="header-logo" width="180px" alt="Логотип Noemi"></a>
