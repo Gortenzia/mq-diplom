@@ -17,9 +17,9 @@
         <h3 class="sign-up__title">Ваш фидбек</h3>
       </header>
 
-      <div class="sign-up__content">
+     <div class="sign-up__content">
 
-        <form class="form">
+    <form class="form">
           <div class="form-group">
             <label class="select-group">
               <span class="select-label">Как часто вы заходите на сайт?</span>
@@ -30,31 +30,29 @@
                 <option value="several-in-year">Несколько раз в год</option>
               </select>
             </label>
-          </div>
-        </form>
-      </div>
-      <div class="form-radio">
-        <span class="form-radio-text">Вы подписаны на e-mail рассылку?</span>
-        <label class="radio-group">
+           </div> 
+         <div class="form-radio">
+           <span class="form-radio-text">Вы подписаны на e-mail рассылку?</span>
+         <label class="radio-group">
           <input name="select" type="radio" class="radio">
-          <span class="radio-text" value="1">Да</span> 
+            <span class="radio-text" value="1">Да</span> 
           </label>
          <label class="radio-group">
           <input name="select" type="radio" class="radio">
-          <span class="radio-text" value="0">Нет</span>
+            <span class="radio-text" value="0">Нет</span>
          </label>
-      </div>
-      <div class="text-form-group">
-        <label class="field-group">
-          <span class="field-label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
-          <textarea class="field-textarea" placeholder="Может, больше рецептов?" rows="10" cols="45" name="text"></textarea>
-        </label>
-      </div>
-      <div class="form-group form-actions">
-        <button class="pop-button-submit" type="button"><span class="pop-button-submit-text">Отправить</span></button>
-      </div>
-      </form>
-    </div>
+         </div>
+         <div class="text-form-group">
+           <label class="field-group">
+            <span class="field-label">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+            <textarea class="field-textarea" placeholder="Может, больше рецептов?" rows="10" cols="45" name="text"></textarea>
+          </label>
+         </div>
+         <div class="form-group form-actions">
+          <button class="pop-button-submit" type="button"><span class="pop-button-submit-text">Отправить</span></button>
+         </div>
+     </form>
+
     <button class="popup__close" type="button"><span class="popup__close-text">Закрыть окно</span></button>
   </div>
 </div>
@@ -101,7 +99,7 @@
     
     <div class="card-container">
       
-       <article class="card1">
+       <article class="card1 all-cards">
         <div class="card__preview">
           <div class="card__img1" alt="Рассада"></div>
           
@@ -114,7 +112,7 @@
           </div>
       </article>
 
-      <article class="card2">
+      <article class="card2 all-cards">
         <div class="card__preview">
           <div class="card__img" alt="Сыры"></div>
         </div>
@@ -126,7 +124,7 @@
         </div>
       </article>
 
-      <article class="card3">
+      <article class="card3 all-cards">
         <div class="card__preview">
           <div class="card__img" alt="Поход в горы"></div>
         </div>
@@ -139,7 +137,7 @@
         </div>
       </article>
 
-      <article class="card4">
+      <article class="card4 all-cards">
         <div class="card__preview">
           <div class="card__img" alt="Лимоны"></div>
         </div>
@@ -351,7 +349,9 @@
             <span class="visually-hidden">Не можете что-то найти? Используйте поиск!</span>
             <input class="field" name="query" placeholder="Найти..." required>
           </label>
-          <button class="button"></button>
+          <button class="button">
+          	<span class="visually-hidden">Запускаем поиск.</span>
+          </button>
         </form>
       </section>
 

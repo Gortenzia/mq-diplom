@@ -80,7 +80,6 @@
 
 .popup__container {
   max-width: 390px;
-  height: 589px;
   width: 100%;
   margin: auto;
   background-color: #ffffff;
@@ -92,23 +91,20 @@
   background-color: #ffffff;
   color: #ffffff;
   display: block;
-}
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 50px;
+ }
 
-.sign-up__content {
-  margin-left: 40px;
-  margin-right: 50px;
-}
 
 .sign-up__header {
   background-color: #ffffff;
   color: #ffffff;
   font-size: 16px;
-  padding-top: 40px;
 }
 
 .sign-up__title {
   font-size: 20px;
-  line-height: 29px;
   color: #0f0d0e;
   font-weight: 700;
   font-family: Open Sans;
@@ -126,10 +122,13 @@
   background-color: #b59f5b;
   margin-top: 10px;
   margin-right: 0;
+  margin-bottom: 30px;
 }
 
 .form {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .popup__close {
@@ -206,9 +205,10 @@
 }
 
 .form-radio {
-  padding: 40px;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-top: 20px;
  }
 
 
@@ -257,8 +257,8 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 14px;
-  width: 11px;
-  height: 11px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
  background-color: #b59f5b;
 }
@@ -271,8 +271,6 @@
 }
 
 .text-form-group {
-  padding-left: 40px;
-  padding-right: 40px;
   margin-bottom: 15px;
 }
 
@@ -309,15 +307,17 @@
   outline: 1px solid #b59f5b;
 }
 
+.form-actions {
+  margin-bottom: 50px;
+}
+
 .pop-button-submit {
-  margin-left: 40px;
-  margin-right: 40px;
-  width: 330px;
+  width: 330px; /* Не выходит правильно отображать кнопку при ширине 100%, пробовала несколько способов. Почему не работает?*/
   height: 48px;
   background-color: #b59f5b;
   margin-bottom: 50px;
   border: none;
-}
+ }
 
 .pop-button-submit:hover {
   width: 330px;
@@ -374,8 +374,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-  width: 55%;
-}
+ }
 
 .menu-list {
   display: flex;
@@ -391,12 +390,16 @@
   text-transform: uppercase;
   list-style-type: none;
   vertical-align: top;
+  margin-left: 40px;
 }
 
 .menu-link {
   text-decoration: none;
   color: #fbfdfc;
-  margin-left: 40px;
+ }
+
+.menu-link:first-child {
+  margin-left: 0;
 }
 
 .menu-link:last-child {
@@ -437,7 +440,7 @@
 
 .trend-header {
   font-size: 20px;
-  line-height: 29px;
+
   color: #0f0d0e;
   font-weight: 700;
   font-family: Open Sans;
@@ -462,21 +465,28 @@
 
 .card-container {
    display: flex;
-  
-}
+ }
 
-.card1, .card2, .card3, .card4 {
+
+.all-cards { /*п.9 в рекомендациях очень помог!*/
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   background-color: #eff6f1;
   width: 25%;
-  height: 319px;
-  margin: 2px;
+  min-height: 319px;
+  margin-right: 0.2%; /*Иначе слипаются*/
   position: relative;
   display: flex;
   align-items: flex-end;
+  padding-left: 10px;
+  padding-bottom: 15px;
+  flex-basis: 1;
  }
+
+.all-cards:last-child {
+ margin-right: 0;
+}
 
 .card1 {
   background-image: url(../images/trend1.jpg);
@@ -494,7 +504,7 @@
   background-image: url(../images/trend4.jpg);
 }
 
-.card1::after, .card2::after, .card3::after, .card4::after{
+.all-cards::after{
   content: " ";
   position: absolute;
   top: 0;
@@ -509,12 +519,10 @@
 
 .card__body {
   width: 90%;
-  height: 50%;
+  height: 62%;
   box-sizing: border-box;
-  padding: 0px 15px 15px 25px;
-  margin-left: 3%;
-  margin-bottom: 3%;
-  margin-right: 0%;
+  padding: 30px 2px 35px 25px;
+  border: 3px solid #b59f5b;
   position: relative;
   text-align: stretch;
   text-transform: uppercase;
@@ -526,20 +534,7 @@
   z-index: 1;
  }
 
-.card__body:before {
-  content: "";
-  width: 370px;
-  height: 146px;
-  border: 3px solid #b59f5b;
-  background-color: rgba(0,0,0,0);
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  width: 95%;
-  height: 95%;
- }
+
 
 .card__name {
 width: 90%;
@@ -549,10 +544,8 @@ line-height: 24px;
 color: #ffffff;
 font-weight: 700;
 font-family: Open Sans;
-padding-bottom: 20px;
-padding-right: 20px;
 z-index: 1;
-vertical-align: center;
+margin-top: 15px;
 }
 
 .card__name:hover {
@@ -576,7 +569,9 @@ font-family: Open Sans;
   align-items: flex-start;
   justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .travel-articles {
@@ -592,19 +587,17 @@ font-family: Open Sans;
 .travel {
   box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   margin-top: 70px;
 }
 
-.travel-img {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  min-width: 381px;
-  padding-right: 0;
-  background-color: #000000;
+.travel:first-child{
+  margin-top: 0;
 }
+
+.travel-img {
+   min-width: 381px;
+ }
 
 .tags-list {
   display: flex;
@@ -616,13 +609,13 @@ font-family: Open Sans;
 .tag-list {
   text-decoration: none;
   font-size: 14px;
-  line-height: 40px;
+  
   color: #b59f5b;
   font-weight: 700;
   font-family: Open Sans;
   text-transform: uppercase;
   margin-right: 15px;
-}
+ }
 
 .tag-list:hover {
   text-decoration: underline;
@@ -645,30 +638,32 @@ h3 {
   color: #b59f5b;
 }
 
+.travel-name {
+	margin-top: 15px;
+}
+
 .date-autor-list {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: stretch;
   list-style-type: none;
   vertical-align: center;
 }
 
 .card-date {
-  height: 10px;
-  padding: 15px 0 15px 0;
+  margin: 15px 0 15px 0;
   font-size: 12px;
   color: #888888;
   font-family: Open Sans;
   font-weight: 400;
-  line-height: 40px;
+  
 }
 
 .author {
-  padding: 15px 0 15px 25px;
+  margin: 15px 0 15px 25px;
   font-size: 12px;
-  line-height: 40px;
   color: #000000;
   font-weight: 700;
   font-family: Open Sans;
@@ -680,6 +675,7 @@ h3 {
   color: #0f0d0e;
   font-weight: 400;
   font-family: Open Sans;
+
 }
 
 .travel-info {
@@ -689,14 +685,11 @@ h3 {
   justify-content: flex-start;
   align-items: flex-start;
   box-sizing: border-box;
-  width: 460px;
-  padding-left: 25px;
-  padding-right: 70px;
-}
+  margin-left: 25px;
+  }
 
 .aside-content {
   box-sizing: border-box;
-  padding-top: 70px;
   font-size: 14px;
   display: flex;
   flex-direction: row;
@@ -716,7 +709,8 @@ h3 {
 }
 
 .last-news-title {
-  margin-left: 31%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
@@ -743,25 +737,17 @@ h3 {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 271px;
-  margin: 2px;
-}
+  margin-bottom: 30px;
+  }
 
 .preview-picture {
-  margin: 0 15px 30px 0;
+  margin: 0 15px 0px 0;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   width: 71px;
 }
 
-.last-post-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
-  max-width: 185px;
-}
 
 .last-post-date {
   font-size: 12px;
@@ -786,18 +772,18 @@ h3 {
 
 .search-section {
   margin: 70px 0 50px 0;
+  min-width: 271px;
   display: flex;
-  box-sizing: border-box;
   justify-content: center;
-  align-items: baseline;
+  align-items: stretch;
 }
 
 .search {
   max-height: 50px;
+  min-width: 271px;
   display: flex;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: stretch;
   vertical-align: top;
 }
 
@@ -809,11 +795,11 @@ h3 {
 }
 
 .field {
-  box-sizing: border-box;
   border: 2px solid #dfe0df;
   padding: 10px 25px 10px 15px;
-  margin: 0;
+  margin: auto;
   min-height: 48px;
+  min-width: 223px;
   display: flex;
   align-items: baseline;
   font-size: 14px;
@@ -850,7 +836,7 @@ h3 {
   align-items: stretch;
   justify-content: flex-start;
   box-sizing: border-box;
-  width: 271px;
+  min-width: 271px;
 }
 
 .send-title {
@@ -861,7 +847,6 @@ h3 {
   justify-content: center;
   align-items: center;
   font-size: 14px;
-  line-height: 29px;
   color: #0f0d0e;
   font-weight: 700;
   font-family: Open Sans;
@@ -881,22 +866,17 @@ h3 {
 .subscription {
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
   min-width: 271px;
-  width: 270px;
-  height: 48px;
-  background-color: #f4f7f6;
-  max-height: 50px;
   justify-content: center;
   align-items: center;
 }
 
 .send-field {
-  margin: 70px 0 15px 0;
-  box-sizing: border-box;
+  margin: 30px 0 15px 0;
   min-height: 50px;
   min-width: 271px;
   border: 2px solid #dfe0df;
+  background-color: #f4f7f6;
   padding: 10px 25px 10px 15px;
 }
 
@@ -958,6 +938,10 @@ h3 {
   text-transform: uppercase;
 }
 
+.aside-tag-list-title {
+  margin: 0 10px 0 0;
+}
+
 .aside-tag-list-title a {
   font-size: 12px;
   line-height: 40px;
@@ -966,7 +950,6 @@ h3 {
   font-family: Open Sans;
   text-decoration: none;
   list-style-type: none;
-  margin: 0 10px 0 0;
   border: 3px solid #eeeeee;
   padding: 7px;
 }
@@ -1008,8 +991,13 @@ h3 {
   background-color: #b59f5b;
 }
 
+.topics-list {
+  margin-top: 30px;
+}
+
 .topics-list-title {
-  font-size: 14px;
+ display: inline-flex;
+ font-size: 14px;
   line-height: 47px;
   color: #000000;
   font-weight: 700;
@@ -1028,15 +1016,11 @@ h3 {
   min-width: 271px;
 }
 
-.topics-list-title:first-child {
-  margin-top: 30px;
-}
-
 .topics-list-title a:hover {
   color: #b59f5b;
 }
 
-.numbers-of-topics {
+.numbers-of-topics { /*п.32 рекомендаций. Не выходит сохранить стуктуру, при выносе <span> из <a> */
   margin-left: 2px;
   color: #b59f5b;
   font-size: 12px;
@@ -1050,6 +1034,7 @@ h3 {
   flex-direction: column;
   max-width: 1200px;
   margin: 70px auto;
+  margin-top: 40px;
 }
 
 .section__header {
@@ -1063,9 +1048,7 @@ h3 {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
-  margin-bottom: 0px;
-}
+  }
 
 .section__header::after {
   content: " ";
