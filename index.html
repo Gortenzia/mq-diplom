@@ -60,8 +60,11 @@
 
   <header class="header">
     <div class="container">
-      <a href="/"><img src="svg/noemi-logo.svg" class="header-logo" width="180px" alt="Логотип Noemi"></a>
+      <a href="/"><img src="svg/noemi-logo.svg" class="header-logo" alt="Логотип Noemi"></a>
       <nav class="menu">
+      	 <button class="menu__button js-menu__button">
+            <span class="menu__button-label">открыть меню</span>
+         </button>
         <ul class="menu-list">
           <li class="menu-list-item">
             <a class="menu-link" href="#0">Главная</a>
@@ -156,6 +159,7 @@
 
   <div class="page">
     <main class="main-content">
+
       <div class="travel-articles">
         <article class="travel">
           <div class="travel-preview">
@@ -278,9 +282,9 @@
     <aside class="aside-content">
 
       <section class="side-bar">
-
+      <div class="last-news-header">
         <h3 class="last-news-title">Новые посты</h3>
-
+      </div>
         <section class="post-list">
           <div class="preview-picture">
             <img class="aside-image" src="images/2.jpg" alt="Идущий по линии прибоя силуэт">
@@ -385,12 +389,12 @@
       <section class="topics">
         <h3 class="topics-header">Темы</h3>
         <ul class="topics-list">
-          <li class="topics-list-title"><a href="#0">Красота<span class="numbers-of-topics">12</span></a></li>
-          <li class="topics-list-title"><a href="#0">Здоровье<span class="numbers-of-topics">4</span></a></li>
-          <li class="topics-list-title"><a href="#0">Образ жизни<span class="numbers-of-topics">145</span></a></li>
-          <li class="topics-list-title"><a href="#0">Музыка<span class="numbers-of-topics">28</span></a></li>
-          <li class="topics-list-title"><a href="#0">Спорт<span class="numbers-of-topics">62</span></a></li>
-          <li class="topics-list-title"><a href="#0">Йога<span class="numbers-of-topics">8</span></a></li>
+          <li class="topics-list-title"><a class="link-of-topics-list-title" href="#0">Красота</a><span class="numbers-of-topics">12</span></li>
+          <li class="topics-list-title"><a class="link-of-topics-list-title" href="#0">Здоровье</a><span class="numbers-of-topics">4</span></li>
+          <li class="topics-list-title"><a class="link-of-topics-list-title" href="#0">Образ жизни</a><span class="numbers-of-topics">145</span></li>
+          <li class="topics-list-title"><a class="link-of-topics-list-title" href="#0">Музыка</a><span class="numbers-of-topics">28</span></li>
+          <li class="topics-list-title"><a class="link-of-topics-list-title" href="#0">Спорт</a><span class="numbers-of-topics">62</span></li>
+          <li class="topics-list-title"><a class="link-of-topics-list-title" href="#0">Йога</a><span class="numbers-of-topics">8</span></li>
         </ul>
       </section>
 
@@ -407,7 +411,7 @@
   <section class="products">
 
     <article class="product">
-      <div class="product__imgbox1">
+      <div class="product__imgbox1 product__imgboxes">
         <div class="product__img" alt="Подушка"></div>
       </div>
       <div class="product__body">
@@ -434,7 +438,7 @@
     </article>
 
     <article class="product">
-      <div class="product__imgbox2">
+      <div class="product__imgbox2 product__imgboxes">
         <div class="product__img" alt="Зайчик"></div>
       </div>
       <div class="product__body">
@@ -457,7 +461,7 @@
     </article>
 
     <article class="product">
-      <div class="product__imgbox3">
+      <div class="product__imgbox3 product__imgboxes">
         <div class="product__img" alt="Ваза"></div>
       </div>
       <div class="product__body">
@@ -490,6 +494,8 @@
  
   <footer class="footer">
     <section class="social-section">
+
+     <div class="footer-container">
       <ul class="socials">
         <li class="socials-item">
           <a href="#0" class="socials-link socials-link-twitter">
@@ -511,7 +517,9 @@
           <a href="#0" class="socials-link socials-link-tumblr">
             <span class="socials-link-text">tumblr</span></a>
         </li>
-      </ul>
+        </ul>
+      </div>
+
     </section>
 
     <section class="copyright">
