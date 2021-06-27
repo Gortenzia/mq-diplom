@@ -847,14 +847,15 @@ font-family: Open Sans;
   max-width: 1200px;
   margin-top: 70px;
   width: 86%;
-  margin-right: 7%;
-  margin-left: 7%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 
 .main-content {
 	width: 80%;
-  margin-right: 10%;
+  margin-right: auto;
+  margin-left: auto;
   }
 
 @media (min-width:641px) and (max-width: 1200px) {
@@ -863,8 +864,8 @@ font-family: Open Sans;
   }
 
   .main-content {
-    margin-right: 2%;
-    margin-left: 3%;
+    margin-right: auto;
+    margin-left: auto;
   	max-width: 46%;
   }
   
@@ -880,7 +881,7 @@ font-family: Open Sans;
   }
 
   .main-content {
-    margin-right: 5%;
+    margin-right: auto;
     margin-left: auto;
     max-width: 55%;
   }
